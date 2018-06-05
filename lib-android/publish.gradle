@@ -24,8 +24,8 @@ install {
             }
             developers {
                 developer {
-                    name project.property('user.name')
-                    email project.property('user.email')
+	            name project.hasProperty('user.name') ? project.property('user.name') : ''
+        	    email project.hasProperty('user.email') ? project.property('user.email') : ''
                     organization = 'Google LLC'
                     organizationUrl 'https://www.google.com'
                 }
